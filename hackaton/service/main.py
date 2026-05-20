@@ -15,7 +15,7 @@ LOGGER = logging.getLogger(__name__)
 server = ZeroServer(host=settings.app_host, port=settings.app_port, use_threads=True)
 service = HackatonRpcService(
     repository=Repository(db_path=settings.db_path),
-    prepare=PrepareManager(settings.prepare_sleep_seconds),
+    prepare=PrepareManager(settings.prepare_sleep_seconds, db_path=settings.db_path),
 )
 
 

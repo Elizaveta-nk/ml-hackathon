@@ -1,0 +1,11 @@
+{
+  "user_path": "data/train/user.csv",
+  "shift_path": "data/train/shift.csv",
+  "event_path": "data/train/event.csv",
+  "output_dir": "artifacts/train",
+  "random_state": 42,
+  "max_iter": 1000,
+  "test_ratio": 0.2,
+  "skip_shap": true,
+  "shap_sample_size": 1000
+}

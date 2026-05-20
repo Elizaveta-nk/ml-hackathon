@@ -218,7 +218,6 @@ __marimo__/
 /local/
 stage3_data_prep.ipynb
 ranking.ipynb
-artifacts/
 data/
 .DS_Store
 settings.json

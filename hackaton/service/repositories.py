@@ -118,3 +118,22 @@ class Repository:
             cursor = await db.execute(query, (limit,))
             rows = await cursor.fetchall()
         return [row[0] for row in rows]
+
+    async def find_candidates_for_ml(
+        self,
+        location_id: str,
+        need_mk: bool,
+        limit: int = 3000,
+    ) -> list[dict]:
+        query = """
+        SELECT id, location_id, is_strict_location, has_mk
+        FROM users
+        WHERE location_id = ?
+          AND (? = 0 OR has_mk = 1)
+        LIMIT ?
+        """
+        async with aiosqlite.connect(self.db_path) as db:
+            db.row_factory = aiosqlite.Row
+            cursor = await db.execute(query, (location_id, int(need_mk), limit))
+            rows = await cursor.fetchall()
+        return [dict(row) for row in rows]

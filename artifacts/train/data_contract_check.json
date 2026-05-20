@@ -1,0 +1,45 @@
+{
+  "user": {
+    "rows": 8802,
+    "required_columns_ok": true,
+    "null_counts": {
+      "location_id": 0,
+      "is_strict_location": 0,
+      "id": 0,
+      "has_mk": 0
+    }
+  },
+  "shift": {
+    "rows": 65624,
+    "required_columns_ok": true,
+    "null_counts": {
+      "id": 0,
+      "start_at": 0,
+      "location_id": 0,
+      "task_type": 0,
+      "employer_id": 0,
+      "workplace_id": 0,
+      "need_mk": 0,
+      "id_differential": 0,
+      "hours": 0,
+      "reward": 0,
+      "capacity": 0
+    }
+  },
+  "event": {
+    "rows": 840850,
+    "required_columns_ok": true,
+    "null_counts": {
+      "id": 0,
+      "shift_id": 0,
+      "user_id": 0,
+      "interaction": 0,
+      "ts": 0
+    }
+  },
+  "post_clean_rows": {
+    "user": 8802,
+    "shift": 65624,
+    "event": 421003
+  }
+}
